@@ -26,7 +26,7 @@ jobs:
 
     - name: Install Playwright Browsers
       run: |
-        playwright install --with-deps chromium
+        python -m playwright install --with-deps chromium
 
     - name: Run Playwright tests
       run: |
