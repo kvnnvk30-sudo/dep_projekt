@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>М Я С О — Культ Продукта</title>
+    <style>
+        /* Сброс базовых стилей */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+        }
+
+        /* Контейнер для центрирования контента */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Шапка сайта */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #e63946; /* Акцентный мясной красный */
+        }
+
+        nav a {
+            color: #888888;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            border-bottom: 1px solid #1a1a1a;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #888888;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #0a0a0a;
+        }
+
+        /* Сетка товаров (Products) */
+        .products {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #888888;
+            letter-spacing: 0.3em;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: #111111;
+            padding: 40px;
+            border: 1px solid #1a1a1a;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #e63946;
+        }
+
+        .card-tag {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #e63946;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: #666666;
+            font-size: 14px;
+        }
+
+        /* Подвал (Footer) */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+            color: #444444;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* Адаптивность для мобилок */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 36px; }
+            .nav-wrapper { flex-direction: column; gap: 20px; }
+            nav a { margin: 0 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Мясо.</div>
+            <nav>
+                <a href="#menu">Меню</a>
+                <a href="#about">О нас</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Ничего лишнего.<br>Только огонь и вкус.</h1>
+                <p>Выдержанная говядина премиального качества. Правильный зерновой откорм, идеальный мраморный срез и честная технология.</p>
+                <a href="#menu" class="btn">Смотреть меню</a>
+            </div>
+        </section>
+
+        <section id="menu" class="products">
+            <div class="container">
+                <div class="section-title">Прайм отрубы</div>
+                <div class="grid">
+                    
+                    <div class="card">
+                        <div class="card-tag">Dry Aged / 28 дней</div>
+                        <h3>Рибай</h3>
+                        <p>Классика с высокой мраморностью. Максимально сочный отруб из толстого края.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-tag">Dry Aged / 21 день</div>
+                        <h3>Стриплоин</h3>
+                        <p>Тонкий край с ярко выраженным мясным вкусом и плотной текстурой.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-tag">Flame Ready</div>
+                        <h3>Тибон</h3>
+                        <p>Брутальный стейк на Т-образной кости, сочетающий стриплоин и нежную вырезку.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container" id="contacts">
+            <p>© 2026 МЯСО. КУЛЬТ ПРОДУКТА. УЛ. МЯСНИЦКАЯ, 12 • +7 (999) 000-00-00</p>
+        </div>
+    </footer>
+
+</body>
+</html>
