@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/playwright/python:v1.45.0-jammy
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY test_meat_site.py .
+CMD ["pytest", "test_meat_site.py", "-v"]
+
